@@ -24,58 +24,72 @@
     <h1 class="masthead-title reveal d2">Publications</h1>
   </header>
 
-  <main class="content">
-    <p class="reveal d3" style="color:var(--ink-soft);margin-bottom:30px;">
+  <main class="content wide">
+    <p class="pub-intro reveal d3">
       For an up-to-date list of publications, see my
       <a href="https://scholar.google.com/citations?user=YOURID">Google Scholar</a> page.
     </p>
 
-    <!-- ===== One <article class="pub"> per paper, newest first. =====
-         Replace the placeholder <a class="pub-thumb"><span>fig</span></a>
-         with:  <a class="pub-thumb" href="PAPER_URL"><img src="images/fig1.jpg" alt=""></a>
-    -->
+    <!-- ===== Publications grid. One <a class="pub-card"> per paper, newest first. =====
+         * href      = link to the paper (journal page, arXiv, PDF, etc.)
+         * Replace the placeholder <span class="pub-img">figure</span> with a real image:
+               <img class="pub-img" src="images/fig1.jpg" alt="">
+           (put the figure files in your images/ folder)
+         * .pub-authors = "Authors. <span class='yr'>Year</span>"
+         * .pub-name    = the paper title (+ venue if you like)
+         Add or remove cards by copying/deleting a whole <a class="pub-card">…</a> block. -->
 
-    <article class="pub reveal d3">
-      <a class="pub-thumb" href="#"><span>figure</span></a>
-      <div class="pub-body">
-        <h3 class="pub-head"><a href="#">Your Name, Coauthor A, Coauthor B. 2026</a></h3>
-        <p class="pub-desc">A Descriptive Title for Your First Paper. <span class="venue">Journal Name</span>, to appear.</p>
-      </div>
-    </article>
+    <div class="pub-grid">
 
-    <article class="pub reveal d3">
-      <a class="pub-thumb" href="#"><span>figure</span></a>
-      <div class="pub-body">
-        <h3 class="pub-head"><a href="#">Coauthor C, Your Name. 2026</a></h3>
-        <p class="pub-desc">A Second Paper Title Goes Here. <span class="venue">Proceedings of Some Conference</span>.</p>
-      </div>
-    </article>
+      <a class="pub-card reveal d3" href="#">
+        <span class="pub-img">figure</span>
+        <p class="pub-authors">Your Name, Coauthor A, and Sinha, D. <span class="yr">2026</span></p>
+        <p class="pub-name">A Descriptive Title for Your First Paper. Journal Name.</p>
+      </a>
 
-    <article class="pub reveal d4">
-      <a class="pub-thumb" href="#"><span>figure</span></a>
-      <div class="pub-body">
-        <h3 class="pub-head"><a href="#">Your Name, Coauthor D. 2025</a></h3>
-        <p class="pub-desc">An Earlier Paper Title. <span class="venue">Journal Name</span>, 18(3), 123-145.</p>
-      </div>
-    </article>
+      <a class="pub-card reveal d3" href="#">
+        <span class="pub-img">figure</span>
+        <p class="pub-authors">Your Name. <span class="yr">2026</span></p>
+        <p class="pub-name">A Second Paper Title Goes Here. Proceedings of Some Conference.</p>
+      </a>
 
-    <article class="pub reveal d4">
-      <a class="pub-thumb" href="#"><span>figure</span></a>
-      <div class="pub-body">
-        <h3 class="pub-head"><a href="#">Coauthor E, Your Name. 2024</a></h3>
-        <p class="pub-desc">Yet Another Paper Title. <span class="venue">Annals of Some Field</span>, 12(4), 2054-2074.</p>
-        <p class="pub-extra"><a href="#">Supplemental Material</a></p>
-      </div>
-    </article>
+      <a class="pub-card reveal d3" href="#">
+        <span class="pub-img">figure</span>
+        <p class="pub-authors">Coauthor C, Your Name, and Lipsitz, S.R. <span class="yr">2025</span></p>
+        <p class="pub-name">An Earlier Paper Title. Journal Name, 18(3), 123-145.</p>
+      </a>
 
-    <article class="pub reveal d5">
-      <a class="pub-thumb" href="#"><span>figure</span></a>
-      <div class="pub-body">
-        <h3 class="pub-head"><a href="#">Your Name. 2023</a></h3>
-        <p class="pub-desc">Title of an Earlier Work. <span class="venue">Conference Proceedings (ICML)</span>.</p>
-      </div>
-    </article>
+      <a class="pub-card reveal d3" href="#">
+        <span class="pub-img">figure</span>
+        <p class="pub-authors">Varbanov, R., Your Name, and Yang, Y. <span class="yr">2025</span></p>
+        <p class="pub-name">Yet Another Paper Title. Annals of Some Field, 12(4), 2054-2074.</p>
+      </a>
 
+      <a class="pub-card reveal d4" href="#">
+        <span class="pub-img">figure</span>
+        <p class="pub-authors">Your Name and Coauthor D. <span class="yr">2024</span></p>
+        <p class="pub-name">Title of an Earlier Work. Conference Proceedings (ICML).</p>
+      </a>
+
+      <a class="pub-card reveal d4" href="#">
+        <span class="pub-img">figure</span>
+        <p class="pub-authors">Your Name. <span class="yr">2024</span></p>
+        <p class="pub-name">One More Placeholder Title. Journal of Examples, 7(1), 251-278.</p>
+      </a>
+
+      <a class="pub-card reveal d4" href="#">
+        <span class="pub-img">figure</span>
+        <p class="pub-authors">Coauthor E and Your Name. <span class="yr">2023</span></p>
+        <p class="pub-name">A Paper From a Few Years Ago. Some Venue, 76(1), 131-144.</p>
+      </a>
+
+      <a class="pub-card reveal d4" href="#">
+        <span class="pub-img">figure</span>
+        <p class="pub-authors">Your Name and Coauthor F. <span class="yr">2022</span></p>
+        <p class="pub-name">The Earliest Listed Paper. Another Journal, 33(2), 198-213.</p>
+      </a>
+
+    </div>
   </main>
 
   <footer class="site-footer">
