@@ -140,7 +140,7 @@ h2{
    Clicking the card opens the paper URL in the link's href. */
 .pub-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fill, 250px);
+  grid-template-columns:repeat(auto-fill, 300px);
   justify-content:center;
   gap:38px 30px;
   margin-top:6px;
@@ -154,12 +154,13 @@ h2{
 .pub-img{
   display:flex; align-items:center; justify-content:center;
   width:100%;
-  aspect-ratio:1 / 1;
-  object-fit:cover;
+  aspect-ratio:3 / 2;
+  object-fit:contain;
   border-radius:6px;
   border:1px solid var(--line);
-  background:linear-gradient(135deg,#dce8f5,#aecbe8);
-  color:#5b7da3; font-family:var(--serif); font-size:.85rem;
+  background:#ffffff;
+  padding:8px;
+  color:#9bb0c7; font-family:var(--serif); font-size:.85rem;
   box-shadow:0 8px 20px -12px rgba(20,40,70,.4);
   overflow:hidden;
   transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease;
@@ -246,7 +247,7 @@ h2{
   .topnav{ flex-wrap:wrap; gap:6px 18px; }
   .brand-name{ font-size:1.3rem; }
   .masthead-title{ font-size:2.2rem; }
-  .pub-grid{ grid-template-columns:repeat(2, 1fr); gap:26px 18px; }
+  .pub-grid{ grid-template-columns:1fr; gap:26px; max-width:360px; margin-left:auto; margin-right:auto; }
   .pub-authors{ font-size:.92rem; }
   .pub-name{ font-size:.8rem; }
   .cv-row, .event{ grid-template-columns:1fr; gap:4px; }
