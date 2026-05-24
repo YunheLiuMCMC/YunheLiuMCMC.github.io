@@ -177,6 +177,7 @@ h2{
   color:var(--ink);
   line-height:1.32;
   margin:15px 0 4px;
+  min-height:2.64em;          /* reserve up to 2 lines so titles below line up across cards */
   transition:color .2s ease;
 }
 .pub-authors .yr{ color:var(--muted); font-weight:400; }
