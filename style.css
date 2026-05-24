@@ -40,7 +40,7 @@ body{
   position:relative;
   text-align:center;
   color:#fff;
-  padding:34px 24px 56px;
+  padding:72px 24px 112px;
   background-color:#22324a;                 /* fallback if photo missing */
   background-image:
     linear-gradient(rgba(16,26,40,.45), rgba(16,26,40,.72)),
@@ -253,7 +253,7 @@ h2{
 
 /* ---------- Responsive ---------- */
 @media (max-width:620px){
-  .masthead{ padding:28px 20px 44px; }
+  .masthead{ padding:44px 20px 68px; }
   .navline{ display:none; }
   .topnav{ flex-wrap:wrap; gap:6px 18px; }
   .brand-name{ font-size:1.3rem; }
