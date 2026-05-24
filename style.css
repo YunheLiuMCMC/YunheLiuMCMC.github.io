@@ -140,7 +140,8 @@ h2{
    Clicking the card opens the paper URL in the link's href. */
 .pub-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-columns:repeat(auto-fill, 250px);
+  justify-content:center;
   gap:38px 30px;
   margin-top:6px;
 }
@@ -178,6 +179,7 @@ h2{
   transition:color .2s ease;
 }
 .pub-authors .yr{ color:var(--muted); font-weight:400; }
+.pub-authors .me{ color:var(--accent); text-decoration:underline; text-underline-offset:2px; }
 .pub-card:hover .pub-authors{ color:var(--accent-2); }
 .pub-name{
   font-size:.86rem;
