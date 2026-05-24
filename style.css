@@ -113,6 +113,16 @@ body{
 }
 .lede em{ color:var(--accent-2); font-style:italic; }
 
+/* About-page bio: one uniform serif paragraph, classic academic look */
+.bio{
+  font-family:var(--serif);
+  font-size:1.2rem;
+  line-height:1.55;
+  color:var(--ink-soft);
+  margin:0 0 22px;
+}
+.bio em{ color:var(--accent-2); font-style:italic; }
+
 .content p{ color:var(--ink-soft); margin:0 0 20px; }
 .content a{ color:var(--accent-2); text-decoration:none; border-bottom:1px solid var(--line); }
 .content a:hover{ border-color:var(--accent-2); }
