@@ -223,6 +223,7 @@ h2{
 .cv-row{ display:grid; grid-template-columns:96px 1fr; gap:18px; padding:14px 0; border-bottom:1px solid var(--line); }
 .cv-row:last-child{ border-bottom:none; }
 .cv-row .when{ font-size:.82rem; color:var(--muted); font-family:var(--sans); padding-top:3px; }
+.cv-row .when .school-logo{ display:block; width:46px; height:46px; margin-top:11px; }
 .cv-row .what strong{ font-family:var(--serif); font-size:1.08rem; font-weight:600; }
 .cv-row .what .org{ color:var(--ink-soft); font-size:.95rem; }
 
