@@ -256,6 +256,15 @@ h2{
 .foot-socials a:hover{ background:rgba(255,255,255,.14); color:#fff; transform:translateY(-2px); }
 .foot-socials svg{ width:23px; height:23px; }
 
+.foot-email{
+  display:inline-block; margin-top:18px;
+  font-size:.95rem; letter-spacing:.01em;
+  color:#c9d1dc; text-decoration:none;
+  border-bottom:1px solid rgba(255,255,255,.18);
+  transition:color .2s ease, border-color .2s ease;
+}
+.foot-email:hover{ color:#fff; border-bottom-color:rgba(255,255,255,.5); }
+
 .credits{
   margin-top:26px;
   font-size:.82rem;
