@@ -227,6 +227,67 @@ h2{
 .cv-row .what strong{ font-family:var(--serif); font-size:1.08rem; font-weight:600; }
 .cv-row .what .org{ color:var(--ink-soft); font-size:.95rem; }
 
+/* ---------- Tutorial page: epigraph + section notes ---------- */
+.epigraph{
+  margin:0 0 34px;
+  padding:4px 0 4px 20px;
+  border-left:3px solid var(--accent-2);
+}
+.content .epigraph p{
+  font-family:var(--serif);
+  font-style:italic;
+  font-size:1.25rem;
+  line-height:1.5;
+  color:var(--ink);
+  margin:0 0 6px;
+}
+.epigraph cite{ font-style:normal; font-size:.9rem; color:var(--muted); }
+.content p.section-note{ font-size:.92rem; color:var(--muted); margin:-6px 0 10px; }
+
+/* ---------- Visitors globe (About page) ---------- */
+.visitors[hidden]{ display:none; }
+.globe-box{ position:relative; }
+.globe-box[hidden]{ display:none; }
+.globe-wrap{
+  position:relative;
+  height:320px;
+  overflow:hidden;
+  cursor:grab;
+}
+.globe-wrap:active{ cursor:grabbing; }
+.globe-wrap canvas{ display:block; }
+.globe-wrap .scene-tooltip{
+  font-family:var(--sans) !important; font-size:.8rem !important;
+  background:rgba(22,32,46,.92); color:#fff !important;
+  padding:5px 10px; border-radius:6px; white-space:nowrap;
+}
+.globe-stats, .globe-hint{
+  position:absolute; left:14px; z-index:3; pointer-events:none;
+  color:var(--ink-soft); background:rgba(255,255,255,.85); border:1px solid var(--line);
+  border-radius:999px;
+}
+.globe-stats{ top:12px; font-size:.78rem; padding:4px 11px; font-variant-numeric:tabular-nums; }
+.globe-stats b{ color:var(--ink); font-weight:600; }
+.globe-stats i{ font-style:normal; opacity:.5; margin:0 5px; }
+.globe-hint{ bottom:14px; font-size:.74rem; padding:4px 10px; transition:opacity .4s ease; }
+.globe-box.used .globe-hint{ opacity:0; }
+.globe-ctl{ position:absolute; right:12px; bottom:12px; display:flex; flex-direction:column; gap:6px; z-index:3; }
+.globe-ctl button{
+  width:28px; height:28px; border-radius:8px; border:1px solid var(--line);
+  background:rgba(255,255,255,.9); color:var(--ink-soft); font-size:1.05rem; line-height:1; cursor:pointer;
+}
+.globe-ctl button:hover{ background:var(--accent); border-color:var(--accent); color:#fff; }
+.globe-ctl button:focus-visible{ outline:2px solid var(--accent-2); outline-offset:2px; }
+.city-tag{
+  font-family:var(--sans); font-size:.72rem; font-weight:500; color:#fff; white-space:nowrap;
+  text-shadow:0 1px 3px #000, 0 0 6px rgba(0,0,0,.8);
+  opacity:0; transition:opacity .25s ease; pointer-events:none;
+}
+.city-tag span{ position:absolute; left:9px; top:-.75em; }
+.globe-wrap.zoomed .city-tag{ opacity:1; }
+.content p.visitor-recent{ text-align:center; font-size:.84rem; color:var(--ink-soft); margin:12px 0 0; }
+.visitor-recent .dot{ color:var(--muted); margin:0 7px; }
+
 /* ---------- Calendar / talks ---------- */
 .event{ display:grid; grid-template-columns:120px 1fr; gap:18px; padding:16px 0; border-bottom:1px solid var(--line); }
 .event:last-child{ border-bottom:none; }
@@ -294,6 +355,10 @@ h2{
 @keyframes rise{ to{ opacity:1; transform:none; } }
 .d1{animation-delay:.05s} .d2{animation-delay:.13s} .d3{animation-delay:.21s}
 .d4{animation-delay:.29s} .d5{animation-delay:.37s}
+@media (prefers-reduced-motion: reduce){
+  .reveal{ animation:none; opacity:1; transform:none; }
+  html{ scroll-behavior:auto; }
+}
 
 /* ---------- Responsive ---------- */
 @media (max-width:620px){
@@ -306,6 +371,8 @@ h2{
   .pub-authors{ font-size:.92rem; }
   .pub-name{ font-size:.8rem; }
   .cv-row, .event{ grid-template-columns:1fr; gap:4px; }
+  .globe-wrap{ height:270px; }
+  .globe-hint{ display:none; }
   .credits .sep{ display:block; height:4px; margin:0; }
   .credits .sep::after{ content:""; }
 }
