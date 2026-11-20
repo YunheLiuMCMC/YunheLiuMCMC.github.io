@@ -74,6 +74,13 @@
   }
 
   function draw(data) {
+    // Safety net: if an old cached style.css is in use, the container has no height and the globe
+    // would fill the whole window. Give it the intended size and skip the overlays that need the new CSS.
+    if (el.clientHeight < 50) {
+      el.style.height = "320px"; el.style.overflow = "hidden"; el.style.position = "relative";
+      box.querySelectorAll(".globe-stats, .globe-ctl, .globe-hint").forEach(function (n) { n.hidden = true; });
+      var st = document.createElement("style"); st.textContent = ".city-tag{display:none}"; document.head.appendChild(st);
+    }
     var reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
     var points = data.points || [];
     var radius = function (k) { return function (d) { return (0.28 + Math.sqrt(d.n) * 0.13) * k; }; };
